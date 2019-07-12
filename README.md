@@ -104,9 +104,25 @@ print(finalArray)
 Perform the following set operations on the lists below:
 
 1. Find the intersection and print the result
+
+```swift
+print(list1.intersection(list2))
+```
 2. Find the symmetric difference and print the result
+
+```swift
+print(list1.symmetricDifference(list2))
+```
 3. Find the union and print the result
+
+```swift
+print(list1.union(list2))
+```
 4. What is the outcome of subtracting `list2` from `list1`? Print the result
+
+```swift
+print(list1.subtracting(list2))
+```
 
 ```swift
 let list1: Set = [1, 3, 4, 6, 2, 7, 9]
@@ -128,7 +144,10 @@ spaceships.insert("Serenity")
 
 print(spaceships.count)
 ```
-
+```swift
+// I think the answer is that the code will not compile but I'm not completely sure. Maybe
+// we can go over the diff of compiler error and run time error in class again?
+```
 - 3
 - 4
 - Nothing will be output
@@ -156,6 +175,10 @@ if spaceships1.isSubset(of: spaceships2) {
 } else {
   print("This is not a subset")
 }
+
+```swift
+// I want to say that this also will not compile.
+```
 ```
 
 - This code will compile but crash
