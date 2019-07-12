@@ -13,6 +13,16 @@ Input: heights of trees below:
 Output:
 `169.375`
 
+```swift
+var plantHeights: Set<Int> = [161, 182, 161, 154, 176, 170, 167, 171, 170, 174]
+var sumOfPlants = Int()
+
+for height in plantHeights {
+sumOfPlants += height
+}
+
+print(Double(sumOfPlants) / Double(plantHeights.count))
+```
 
 ## Question 2
 
@@ -20,7 +30,20 @@ Determine if a String is a pangram. A pangram is a string that contains every le
 
  e.g `"The quick brown fox jumps over the lazy dog"` is a pangram
  e.g `"The quick brown fox jumped over the lazy dog"` is NOT a pangram
-
+ 
+ ```swift
+ var panGram = "The quick brown fox jumped over the lazy dog"
+ var panGramChecker = "qwertyuiopasdfghjklzxcvbnm"
+ 
+ var setOfPanGram = Set(panGram)
+ var setOfPanGramChecker = Set(panGramChecker)
+ 
+ if setOfPanGram.isSuperset(of: setOfPanGramChecker) {
+ print("This is a pangram!")
+ } else {
+ print("This is not a pangram!")
+ }
+```
 
 ## Question 3
 
@@ -31,6 +54,21 @@ You are given an array `nums` representing the data status of the set S after th
  Example 1:
  Input: `nums = [1,2,2,4]`
  Output: `[2,3]`
+ 
+ ```swift
+ // I didn't finish this one
+ 
+ var nums = [1,2,2,4]
+ var setNums = Set<Int>()
+ var expectedOutput = [Int]()
+ 
+ for number in 1...nums.count {
+ if expectedOutput.isEmpty {
+ setNums.insert(number)
+ } else if number ==
+ }
+
+ ```
 
  Example 2:
  Input: `nums = [1,1]`
@@ -50,6 +88,14 @@ let arr1 = [2, 4, 5, 6, 8, 10, 12]
 let arr2 = [1, 2, 3, 4, 5, 6]
 let arr3 = [5, 6, 7, 8, 9, 10, 11, 12]
 let arr4 = [1, 3, 4, 5, 6, 7, 9]
+
+let arrayOfArr = arr1 + arr2 + arr3 + arr4
+var setArrayOfArr = Set<Int>(arrayOfArr)
+
+
+let finalArray = [Int](setArrayOfArr).sorted()
+
+print(finalArray)
 ```
 
 
